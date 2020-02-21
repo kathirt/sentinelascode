@@ -50,7 +50,7 @@ stages:
       - task: AzurePowerShell@4
         displayName: 'Install Sentinel'
         inputs:
-         azureSubscription: 'Soricloud Visual Studio'
+         azureSubscription: 'AzureServiceConn'
          ScriptPath: '$(Pipeline.Workspace)/Scripts/Scripts/InstallSentinel.ps1'
          ScriptArguments: '-OnboardingFile onboarding.json'
          azurePowerShellVersion: LatestVersion
