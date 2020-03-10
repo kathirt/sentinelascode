@@ -51,7 +51,7 @@ stages:
       - task: AzurePowerShell@4
         displayName: 'Create and Update Playbooks'
         inputs:
-         azureSubscription: 'Soricloud Visual Studio'
+         azureSubscription: 'AzureServiceConn'
          ScriptPath: '$(Pipeline.Workspace)/Scripts/Scripts/CreatePlaybooks.ps1'
          ScriptArguments: '-resourceGroup $(ResourceGroup) -PlaybooksFolder $(Pipeline.Workspace)/Playbooks'
          azurePowerShellVersion: LatestVersion
