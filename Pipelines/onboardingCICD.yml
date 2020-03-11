@@ -7,7 +7,7 @@ name: build and deploy Sentinel
 resources:
  pipelines:
    - pipeline: Scripts
-     source: ' kathirt/sentinelascode '
+     source: ' kathirt.sentinelascode '
 trigger:
  paths:
    include:
