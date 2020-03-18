@@ -5,7 +5,7 @@ name: build and deploy Connectors
 resources:
  pipelines:
    - pipeline: Scripts
-     source: 'scriptsCI'
+     source: 'SentinelCodeTest_BuildScript'
 trigger:
  paths:
    include:
@@ -48,7 +48,7 @@ stages:
       - task: AzurePowerShell@4
         displayName: 'Create and Update Connectors'
         inputs:
-         azureSubscription: 'Soricloud Visual Studio'
+         azureSubscription: 'AzureServiceConn'
          ScriptPath: '$(Pipeline.Workspace)/Scripts/Scripts/EnableConnectorsAPI.ps1'
          ScriptArguments: '-TenantId $(TenantId) -ClientId $(ClientId) -ClientSecret $(ClientSecret) -SubscriptionId $(SubscriptionId) -ResourceGroup $(ResourceGroup) -Workspace $(Workspace) -ConnectorsFile connectors.json'
          azurePowerShellVersion: LatestVersion
