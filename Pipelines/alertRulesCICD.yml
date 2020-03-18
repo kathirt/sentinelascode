@@ -5,7 +5,7 @@ name: build and deploy Alert Rules
 resources:
  pipelines:
    - pipeline: Scripts
-     source: 'kathirt.sentinelascode'
+     source: 'SentinelCodeTest_BuildScript'
 trigger:
  paths:
    include:
