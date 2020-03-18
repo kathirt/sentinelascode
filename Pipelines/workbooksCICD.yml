@@ -7,7 +7,7 @@ name: build and deploy Workbooks
 resources:
  pipelines:
    - pipeline: Scripts
-     source: 'scriptsCI'
+     source: 'SentinelCodeTest_BuildScript'
 
 trigger:
  paths:
@@ -51,7 +51,7 @@ stages:
       - task: AzurePowerShell@4
         displayName: 'Create and Update Workbooks'
         inputs:
-         azureSubscription: 'Soricloud Visual Studio'
+         azureSubscription: 'AzureServiceConn'
          ScriptPath: '$(Pipeline.Workspace)/Scripts/Scripts/CreateWorkbooks.ps1'
          ScriptArguments: '-ResourceGroup $(ResourceGroup) -WorkbooksFolder $(Pipeline.Workspace)/Workbooks -WorkbookSourceId $(workbookSourceId)'
          azurePowerShellVersion: LatestVersion
