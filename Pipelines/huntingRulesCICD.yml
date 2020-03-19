@@ -7,7 +7,7 @@ name: build and deploy Hunting Rules
 resources:
  pipelines:
    - pipeline: Scripts
-     source: 'scriptsCI'
+     source: 'SentinelCodeTest_BuildScript'
 trigger:
  paths:
    include:
@@ -50,7 +50,7 @@ stages:
       - task: AzurePowerShell@4
         displayName: 'Create and Update Hunting Rules'
         inputs:
-         azureSubscription: 'Soricloud Visual Studio'
+         azureSubscription: 'AzureServiceConn'
          ScriptPath: '$(Pipeline.Workspace)/Scripts/Scripts/CreateHuntingRulesAPI.ps1'
          ScriptArguments: '-Workspace $(Workspace) -RulesFile hunting-rules.json'
          azurePowerShellVersion: LatestVersion
