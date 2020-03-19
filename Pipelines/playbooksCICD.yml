@@ -7,7 +7,7 @@ name: build and deploy Playbooks
 resources:
  pipelines:
    - pipeline: Scripts
-     source: 'kathirt.sentinelascode'
+     source: 'SentinelCodeTest_BuildScript'
 
 trigger:
  paths:
