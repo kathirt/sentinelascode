@@ -3,6 +3,10 @@
         {
             "resourcegroup": "Security_RG",
             "workspace": "SKSentinel-WS"
+        },
+        {
+            "resourcegroup": "Security_RG",
+            "workspace": "AutomateSentinel-LA-WS"
         }
     ]
 }
