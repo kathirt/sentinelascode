@@ -2,15 +2,15 @@
     "deployments": [
         {
             "resourcegroup": "Security_RG",
+            "workspace": "Demo-LA-WS"
+        },
+        {
+            "resourcegroup": "Security_RG",
             "workspace": "SKSentinel-WS"
         },
         {
             "resourcegroup": "Security_RG",
             "workspace": "AutomateSentinel-LA-WS"
-        },
-        {
-            "resourcegroup": "Security_RG",
-            "workspace": "Demo-LA-WS"
-        }
+        }        
     ]
 }
